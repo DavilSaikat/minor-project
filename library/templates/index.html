@@ -1,69 +1,86 @@
 {% load static %}
-{% load bootstrap_icons %}
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Library Management System</title>
-    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
-</head>
-
-<body>
-    <header>
-        <div class="logo">
-            <img src="{% static 'assets/images/logo.png' %}" alt="Logo">
+{% include "components/header.html" %}
+<main>
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="img-box">
+                    <img src="{% static 'assets/images/f302eac8cc4e29865adcba5ab8379efe.jpg' %}" alt="">
+                </div>
+                <div class="container p-0 pt-5">
+                    <h1 class="title">Digital Library</h1>
+                    <h3 class="sub-title">find your loved onus</h3>
+                    <div class="row">
+                        <div class="col-md">
+                            <a href="#" class="custom-btn">Find books
+                                <span></span><span></span><span></span><span></span>
+                            </a>
+                            <a href="#" class="custom-btn">Buy books
+                                <span></span><span></span><span></span><span></span>
+                            </a>
+                            <a href="#" class="custom-btn">Donate
+                                <span></span><span></span><span></span><span></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="img-box">
+                    <img src="{% static 'assets/images/bg-2.jpg' %}" alt="">
+                </div>
+                <div class="container p-0 pt-5">
+                    <h1 class="title">Digital Library</h1>
+                    <h3 class="sub-title">find your loved onus</h3>
+                    <div class="row">
+                        <div class="col-md">
+                            <a href="#" class="custom-btn">Find books
+                                <span></span><span></span><span></span><span></span>
+                            </a>
+                            <a href="#" class="custom-btn">Buy books
+                                <span></span><span></span><span></span><span></span>
+                            </a>
+                            <a href="#" class="custom-btn">Donate
+                                <span></span><span></span><span></span><span></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="img-box">
+                    <img src="{% static 'assets/images/bg-3.jpg' %}" alt="">
+                </div>
+                <div class="container p-0 pt-5">
+                    <h1 class="title">Digital Library</h1>
+                    <h3 class="sub-title">find your loved onus</h3>
+                    <div class="row">
+                        <div class="col-md">
+                            <a href="#" class="custom-btn">Find books
+                                <span></span><span></span><span></span><span></span>
+                            </a>
+                            <a href="#" class="custom-btn">Buy books
+                                <span></span><span></span><span></span><span></span>
+                            </a>
+                            <a href="#" class="custom-btn">Donate
+                                <span></span><span></span><span></span><span></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <nav>
-            <ul>
-                <li>
-                    <a href="">
-                        <span></span><span></span><span></span><span></span>
-                        Home
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span></span><span></span><span></span><span></span>
-                        Books
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span></span><span></span><span></span><span></span>
-                        Authors
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span></span><span></span><span></span><span></span>
-                        Categories
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span></span><span></span><span></span><span></span>
-                        Users
-                    </a>
-                </li>
-            </ul>
-        </nav>
-        <div class="toggle-btn">
-            <div class="line-1 line"></div>
-            <div class="line-2 line"></div>
-            <div class="line-3 line"></div>
-        </div>
-    </header>
-    <script>
-        let toggleBtn = document.querySelector('.toggle-btn');
-        let nav = document.querySelector('nav');
-        toggleBtn.addEventListener('click', () => {
-            toggleBtn.classList.toggle('active');
-            nav.classList.toggle('active');
-        });
-
-    </script>
-</body>
-
-</html>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</main>
+<section style="height: 100vh;"></section>
+{% include "components/footer.html" %}

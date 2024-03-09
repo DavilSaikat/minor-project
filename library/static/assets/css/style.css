@@ -1,4 +1,5 @@
 @import url(color.css);
+@import url(animations.css);
 
 * {
     margin: 0;
@@ -7,9 +8,10 @@
 }
 
 a {
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
+/* Hedaer Style Start */
 header {
     width: 100%;
     height: 100px;
@@ -17,6 +19,10 @@ header {
     justify-content: space-around;
     align-items: center;
     background: var(--secondary);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
 }
 
 div.logo {
@@ -130,11 +136,13 @@ header .toggle-btn {
         background: rgba(255, 255, 255, 0.5);
         backdrop-filter: blur(5px);
         transition: 0.5s ease-in-out all;
+        z-index: 1;
     }
 
     header nav ul {
         height: 100%;
         flex-direction: column;
+        justify-content: space-evenly;
     }
 
     header .toggle-btn {
@@ -168,6 +176,160 @@ header .toggle-btn {
     }
 
     header nav.active {
-        height: calc(100% - 100px);
+        height: calc(100vh - 100px);
+    }
+}
+
+/* Header style end  */
+
+/* Main senction start  */
+#carouselExampleAutoplaying,
+.carousel-inner,
+.carousel-item {
+    width: 100%;
+    height: 100vh;
+}
+
+main {
+    margin-top: 100px;
+    width: 100%;
+    height: calc(100vh - 100px);
+    position: relative;
+    overflow: hidden;
+}
+
+main .img-box {
+    width: inherit !important;
+    height: inherit !important;
+    background: linear-gradient(rgba(var(--bs-primary-rgb), 0.5), rgba(var(--bs-secondary-rgb), 0.5));
+}
+
+main img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+main .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -79%);
+}
+
+main .container .title {
+    margin-top: 120px;
+    font-size: 6rem;
+    font-weight: bold;
+    color: var(--text);
+    text-transform: capitalize;
+    text-align: center;
+}
+
+main .container .sub-title {
+    text-align: end;
+    font-size: 3rem;
+    /* color: #fff; */
+    color: var(--supportive);
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+main .container .sub-title::before {
+    content: "- ";
+}
+
+main .container .row .col-md {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+main .container .row .col-md .custom-btn {
+    background: var(--primary);
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    color: #fff;
+    transition: 0.3s ease-in-out all;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+main .container .row .col-md .custom-btn:nth-child(even) {
+    background: var(--text);
+}
+
+main .container .row .col-md .custom-btn:hover {
+    box-shadow: 0 0 10px var(--supportive),
+        0 0 20px var(--supportive),
+        0 0 50px var(--supportive),
+        0 0 100px var(--supportive);
+}
+
+main .container .row .col-md .custom-btn span {
+    background: linear-gradient(to right, transparent, var(--supportive));
+    position: absolute;
+}
+
+main .container .row .col-md .custom-btn span:nth-child(1) {
+    width: 100%;
+    height: 4px;
+    top: 0;
+    left: -100%;
+    animation: animate1 1s infinite;
+}
+
+main .container .row .col-md .custom-btn span:nth-child(2) {
+    background: linear-gradient(to bottom, transparent, var(--supportive));
+    width: 4px;
+    height: 100%;
+    top: -100%;
+    right: 0;
+    animation: animate2 1s infinite;
+    animation-delay: 0.25s;
+}
+
+main .container .row .col-md .custom-btn span:nth-child(3) {
+    background: linear-gradient(to left, transparent, var(--supportive));
+    width: 100%;
+    height: 4px;
+    bottom: 0;
+    right: -100%;
+    animation: animate3 1s infinite;
+    animation-delay: 0.5s;
+}
+
+main .container .row .col-md .custom-btn span:nth-child(4) {
+    background: linear-gradient(to top, transparent, var(--supportive));
+    width: 4px;
+    height: 100%;
+    bottom: -100%;
+    left: 0;
+    animation: animate4 1s infinite;
+    animation-delay: 0.75s;
+}
+
+@media screen and (max-width: 600px) {
+    main .container .title {
+        text-align: start;
+        font-size: 2rem;
+        margin-left: 20px !important;
+    }
+
+    main .container .sub-title {
+        text-align: end;
+        font-size: 1.25rem;
+        margin-right: 20px;
+    }
+
+    main .container .row .col-md .custom-btn {
+        padding: 5px 10px;
+        font-size: 1rem;
     }
 }
