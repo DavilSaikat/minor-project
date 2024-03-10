@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'library',
     'django_bootstrap_icons',
-    'django_sass',
 ]
 
 MIDDLEWARE = [
