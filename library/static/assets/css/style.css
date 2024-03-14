@@ -22,14 +22,15 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 10;
+    transition: 0.3s linear all;
 }
 
 div.logo {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100px;
+    height: 100%;
     overflow: hidden;
     padding: 10px 0;
 }
@@ -201,7 +202,7 @@ main {
 main .img-box {
     width: inherit !important;
     height: inherit !important;
-    background: linear-gradient(rgba(var(--bs-primary-rgb), 0.5), rgba(var(--bs-secondary-rgb), 0.5));
+    background: linear-gradient(to bottom, rgba(var(--bs-primary-rgb), 1), rgba(var(--bs-secondary-rgb), 0.5));
 }
 
 main img {
@@ -233,7 +234,6 @@ main .container .title {
 main .container .sub-title {
     text-align: end;
     font-size: 3rem;
-    /* color: #fff; */
     color: var(--supportive);
     font-weight: bold;
     text-transform: capitalize;
@@ -316,6 +316,11 @@ main .container .row .col-md .custom-btn span:nth-child(4) {
 }
 
 @media screen and (max-width: 600px) {
+    main .container {
+        padding: 0 !important;
+        transform: translate(-50%, -120%);
+    }
+
     main .container .title {
         text-align: start;
         font-size: 2rem;
