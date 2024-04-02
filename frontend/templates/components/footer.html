@@ -1,0 +1,19 @@
+<script>
+    let toggleBtn = document.querySelector('.toggle-btn');
+    let nav = document.querySelector('nav');
+    let header = document.querySelector('header');
+    toggleBtn.addEventListener('click', () => {
+        toggleBtn.classList.toggle('active');
+        nav.classList.toggle('active');
+    });
+    window.onscroll = function () {
+        if (window.pageYOffset > 50) {
+            header.style.height = '80px';
+        } else {
+            header.style.height = '100px';
+        }
+    };
+</script>
+</body>
+
+</html>
