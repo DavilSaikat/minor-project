@@ -5,3 +5,6 @@ from django.template import loader
 # Create your views here.
 def frontend(request):
     return render(request, "index.html")
+
+def login(request):
+    return render(request, "login.html")
