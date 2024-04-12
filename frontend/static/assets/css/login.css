@@ -32,7 +32,24 @@ body {
 .background {
     position: absolute;
     top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
 
+.background .cloud {
+    position: absolute;
+    bottom: 0;
+    width: 20rem;
+    height: 10rem;
+    background: var(--whiteColor);
+    border-radius: 50%;
+    box-shadow: 0 0 1rem 0 rgba(0 0 0 / .2);
+    
 }
 
 .wrapper {
