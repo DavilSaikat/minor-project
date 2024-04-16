@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    transition: 0.3s linear all;
 }
 
 :root {
@@ -20,7 +21,7 @@ html {
 }
 
 body {
-    background: linear-gradient(135deg, #000435, var(--mainColor));
+    background: linear-gradient(340deg, rgba(137, 33, 107, 1) 19%, rgba(22, 16, 90, 255) 53%);
     font-weight: 400;
     min-height: 100vh;
     display: grid;
@@ -29,27 +30,14 @@ body {
     position: relative;
 }
 
-.background {
+.content {
     position: absolute;
-    top: 0;
-    left: 0;
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
-
-.background .cloud {
-    position: absolute;
-    bottom: 0;
-    width: 20rem;
-    height: 10rem;
-    background: var(--whiteColor);
-    border-radius: 50%;
-    box-shadow: 0 0 1rem 0 rgba(0 0 0 / .2);
-    
+    z-index: 10;
 }
 
 .wrapper {
@@ -188,9 +176,14 @@ form .form-group input:valid~i {
     transform: rotate(7deg);
 }
 
+.wrapper .forgot-password {
+    transform: rotate(-7deg);
+}
+
 .wrapper.animated-signin .form-container.sign-in {
     animation: signin-flip 1s ease-in-out forwards;
 }
+
 
 @keyframes signin-flip {
     0% {
@@ -240,15 +233,55 @@ form .form-group input:valid~i {
     }
 }
 
-.wrapper.wrapper.animated-signup .form-container.sign-in {
-    transform: rotate(7deg);
+.wrapper.animated-signup .form-container.sign-in {
+    transform: rotate(-7deg);
+    animation: rotatecard .7s ease-in-out forwards;
+    animation-delay: .3s;
+}
+
+.wrapper.animated-forgot .form-container.forgot-password {
+    animation: forgot-flip 1s ease-in-out forwards;
+}
+
+.wrapper.animated-forgot .form-container.sign-in {
+    animation: thisRorate .7s ease-in-out forwards;
+}
+
+@keyframes thisRorate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-7deg);
+    }
+}
+
+
+@keyframes forgot-flip {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(50rem) scale(1.1);
+    }
+
+    100% {
+        transform: translateX(0) rotate(0) scale(1);
+        z-index: 1;
+    }
+}
+
+.wrapper.animated-signup .form-container.sign-in {
+    transform: rotate(-7deg);
     animation: rotatecard .7s ease-in-out forwards;
     animation-delay: .3s;
 }
 
 @keyframes rotatecard {
     0% {
-        transform: rotate(7deg);
+        transform: rotate(-7deg);
     }
 
     100% {

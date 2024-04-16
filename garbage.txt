@@ -1,0 +1,445 @@
+
+    .clouds {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: 5;
+        .cloud {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            $color: rgba(44, 10, 107, 255);
+
+            &:nth-child(1) {
+                width: 250px;
+                height: 60%;
+                background: $color;
+                border-top-left-radius: 10%;
+                filter: drop-shadow(0 0 10px $color);
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: -20%;
+                    left: 0;
+                    width: 300px;
+                    height: 300px;
+                    background: $color;
+                    filter: drop-shadow(0 0 10px $color);
+                    border-radius: 50%;
+                    z-index: 1;
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    right: 140px;
+                    width: 250px;
+                    height: 40%;
+                    background: $color;
+                    filter: drop-shadow(0 0 10px $color);
+                    border-top-left-radius: 50%;
+                    border-bottom-left-radius: 50%;
+                    z-index: 1;
+                }
+            }
+
+            &:nth-child(2) {
+                right: 250px;
+                width: 200px;
+                height: 37%;
+                background: $color;
+                border-top-left-radius: 10%;
+                filter: drop-shadow(0 0 10px $color);
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: -20%;
+                    left: -60px;
+                    width: 250px;
+                    height: 200px;
+                    background: inherit;
+                    filter: drop-shadow(0 0 10p$color);
+                    border-radius: 50%;
+                    z-index: 1;
+                }
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 10%;
+                    right: 100%;
+                    width: 140px;
+                    height: 140px;
+                    background: inherit;
+                    filter: drop-shadow(0 0 10p$color);
+                    border-radius: 50%;
+                    z-index: 1;
+                }
+            }
+
+            &:nth-child(3) {
+                right: 450px;
+                width: 250px;
+                height: 25%;
+                border-top-left-radius: 50%;
+                background: $color;
+                filter: drop-shadow(0 0 10px $color);
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: -70px;
+                    left: -88px;
+                    width: 250px;
+                    height: 250px;
+                    background: inherit;
+                    filter: drop-shadow(0 0 10px rgb(44, 10, 107));
+                    border-radius: 50%;
+                    z-index: 1;
+                }
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: -60px;
+                    left: -115px;
+                    width: 140px;
+                    height: 167px;
+                    background: inherit;
+                    filter: drop-shadow(0 0 10p rgb(44, 10, 107));
+                    border-radius: 50%;
+                    z-index: 1;
+                }
+            }
+
+            &:nth-child(4) {
+                right: 650px;
+                width: 250px;
+                height: 150px;
+                border-top-left-radius: 50%;
+                background: $color;
+                filter: drop-shadow(0 0 10px $color);
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: -20px;
+                    left: -50px;
+                    width: 250px;
+                    height: 250px;
+                    background: inherit;
+                    filter: drop-shadow(0 0 10px $color);
+                    border-radius: 50%;
+                    z-index: 1;
+                }
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: -60px;
+                    left: -115px;
+                    width: 140px;
+                    height: 167px;
+                    background: inherit;
+                    filter: drop-shadow(0 0 10p rgb(44, 10, 107));
+                    border-radius: 50%;
+                    z-index: 1;
+                }
+            }
+        }
+    }
+    .clouds-1 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: 5;
+
+        .cloud {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            $color: rgba(126, 26, 202, 255);
+
+            &:nth-child(1) {
+                width: 250px;
+                height: 45%;
+                background: $color;
+                border-top-left-radius: 10%;
+                filter: drop-shadow(0 0 10px $color);
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: -20%;
+                    left: 0;
+                    width: 300px;
+                    height: 300px;
+                    background: $color;
+                    filter: drop-shadow(0 0 10px $color);
+                    border-radius: 50%;
+                    z-index: 1;
+                }
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 20px;
+                    right: 140px;
+                    width: 250px;
+                    height: 50%;
+                    background: $color;
+                    filter: drop-shadow(0 0 10px $color);
+                    border-top-left-radius: 50%;
+                    border-bottom-left-radius: 50%;
+                    z-index: 1;
+                }
+            }
+
+            &:nth-child(2) {
+                right: 250px;
+                width: 200px;
+                height: 25%;
+                background: $color;
+                border-top-left-radius: 10%;
+                filter: drop-shadow(0 0 10px $color);
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: -50%;
+                    left: -140px;
+                    width: 250px;
+                    height: 200px;
+                    background: inherit;
+                    filter: drop-shadow(0 0 10px $color);
+                    border-radius: 50%;
+                    z-index: 1;
+                }
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 10%;
+                    right: 100%;
+                    width: 140px;
+                    height: 140px;
+                    background: inherit;
+                    filter: drop-shadow(0 0 10px $color);
+                    border-radius: 50%;
+                    z-index: 1;
+                }
+            }
+
+            &:nth-child(3) {
+                right: 450px;
+                width: 250px;
+                height: 25%;
+                border-top-left-radius: 50%;
+                background: $color;
+                filter: drop-shadow(0 0 10px $color);
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: -20px;
+                    left: -50px;
+                    width: 250px;
+                    height: 250px;
+                    background: inherit;
+                    filter: drop-shadow(0 0 10px $color);
+                    border-radius: 50%;
+                    z-index: 1;
+                }
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    right: 90%;
+                    width: 200px;
+                    height: 200px;
+                    background: inherit;
+                    filter: drop-shadow(0 0 10px $color);
+                    border-radius: 50%;
+                    z-index: 1;
+                }
+            }
+
+            &:nth-child(4) {
+                right: 650px;
+                width: 200px;
+                height: 0;
+                background: $color;
+                border-top-left-radius: 10%;
+                filter: drop-shadow(0 0 10px $color);
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: -79px;
+                    left: -230px;
+                    width: 250px;
+                    height: 200px;
+                    background: inherit;
+                    filter: drop-shadow(0 0 10px $color);
+                    border-radius: 50%;
+                    z-index: 1;
+                }
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: -52px;
+                    right: 192%;
+                    width: 140px;
+                    height: 140px;
+                    background: inherit;
+                    filter: drop-shadow(0 0 10px $color);
+                    border-radius: 50%;
+                    z-index: 1;
+                }
+            }
+        }
+    }
+    .clouds-2 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: 5;
+
+        .cloud {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            $color: rgba(140, 111, 227, 255);
+
+            &:nth-child(1) {
+                width: 250px;
+                height: 25%;
+                background: $color;
+                border-top-left-radius: 10%;
+                filter: drop-shadow(0 0 10px $color);
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: -20%;
+                    left: 0;
+                    width: 300px;
+                    height: 300px;
+                    background: $color;
+                    filter: drop-shadow(0 0 10px $color);
+                    border-radius: 50%;
+                    z-index: 1;
+                }
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: -3px;
+                    right: 140px;
+                    width: 250px;
+                    height: 50%;
+                    background: rgb(140, 111, 227);
+                    filter: drop-shadow(0 0 10px rgb(140, 111, 227));
+                    border-top-left-radius: 50%;
+                    border-bottom-left-radius: 50%;
+                    z-index: 1;
+                }
+            }
+
+            &:nth-child(2) {
+                right: 250px;
+                width: 200px;
+                height: 14%;
+                background: $color;
+                border-top-left-radius: 10%;
+                filter: drop-shadow(0 0 10px $color);
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: -106%;
+                    left: -140px;
+                    width: 250px;
+                    height: 200px;
+                    background: inherit;
+                    filter: drop-shadow(0 0 10px rgb(140, 111, 227));
+                    border-radius: 50%;
+                    z-index: 1;
+                }
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 10%;
+                    right: 100%;
+                    width: 140px;
+                    height: 140px;
+                    background: inherit;
+                    filter: drop-shadow(0 0 10px $color);
+                    border-radius: 50%;
+                    z-index: 1;
+                }
+            }
+
+            &:nth-child(3) {
+                right: 450px;
+                width: 250px;
+                height: 25%;
+                border-top-left-radius: 50%;
+                background: $color;
+                filter: drop-shadow(0 0 10px $color);
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: -20px;
+                    left: -50px;
+                    width: 250px;
+                    height: 250px;
+                    background: inherit;
+                    filter: drop-shadow(0 0 10px $color);
+                    border-radius: 50%;
+                    z-index: 1;
+                }
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    right: 90%;
+                    width: 200px;
+                    height: 200px;
+                    background: inherit;
+                    filter: drop-shadow(0 0 10px $color);
+                    border-radius: 50%;
+                    z-index: 1;
+                }
+            }
+
+            &:nth-child(4) {
+                right: 650px;
+                width: 200px;
+                height: 0;
+                background: $color;
+                border-top-left-radius: 10%;
+                filter: drop-shadow(0 0 10px $color);
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: -79px;
+                    left: -230px;
+                    width: 250px;
+                    height: 200px;
+                    background: inherit;
+                    filter: drop-shadow(0 0 10px $color);
+                    border-radius: 50%;
+                    z-index: 1;
+                }
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: -52px;
+                    right: 192%;
+                    width: 140px;
+                    height: 140px;
+                    background: inherit;
+                    filter: drop-shadow(0 0 10px $color);
+                    border-radius: 50%;
+                    z-index: 1;
+                }
+            }
+        }
+    }
